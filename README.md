@@ -65,12 +65,15 @@ python3 manage.py createsuperuser
 - Correr el servidor django:
 python3 manage.py runserver
 - Una vez arriba:
-Panel administrativo -> http://localhost:8000/admin/
-Api List -> http://localhost:8000/api/cientificas/
-Api Elemento -> http://localhost:8000/api/cientificas/1
-
+    ```
+    Panel administrativo -> http://localhost:8000/admin/
+    Api List -> http://localhost:8000/api/cientificas/
+    Api Elemento -> http://localhost:8000/api/cientificas/1
+    ```
 ## Frontend
 - En el folder frontend
 - npm start
 - Una vez arriba:
-Pagina inicial -> http://localhost:3000
+    ```
+    Pagina inicial -> http://localhost:3000
+    ```
