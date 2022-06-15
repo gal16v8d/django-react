@@ -1,38 +1,62 @@
-.App {
-  text-align: center;
+.main-header {
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card-container {
+  align-items: center;
+  align-content: center;
+  border-radius: 8px;
+  border-color: transparent;
+  box-shadow: 10px 10px 15px 4px rgba(0,0,0,0.2);
+  margin: 16px 0;
+  padding: 16px 24px;
+  width: 100%;
+  height: 300px;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-data {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: nowrap;
+  align-content: center;
 }
 
-.App-link {
-  color: #61dafb;
+.card-description {
+  margin: 16px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: absolute;
+  right: 16px;
+  bottom: 8px;
 }
+
+.avatar {
+  border-radius: 50%;
+  width: 100px;
+  height: 120px;
+}
+
+.icon-button {
+  border: none;
+  background: transparent;
+  font-size: 24px;
+}
+
+textarea {
+  resize: none;
+}
+
+.modal.fade.show {
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal.fade.show .modal-dialog {
+  transition: transform .3s ease-out;
+} 

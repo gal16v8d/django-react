@@ -53,8 +53,7 @@ python3 manage.py createsuperuser
 
 - Nota
     - Desactivar entorno virtual:
-        exit
-        deactivate
+        **exit** o **deactivate**
 ## Frontend
 - npx create-react-app frontend
 - npm i bootstrap axios
