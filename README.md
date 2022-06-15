@@ -36,9 +36,6 @@ Repo workshop FullStack Women Developer
 pipenv install --skip-lock
 - Activar entorno virtual:
 pipenv shell
-- Desactivar entorno virtual:
-exit
-deactivate
 - Iniciar projecto backend:
 django-admin startproject backend
 - Navegar al directorio:
@@ -54,6 +51,10 @@ python3 manage.py migrate <nombre_modelo>
 - Crear el superusuario:
 python3 manage.py createsuperuser
 
+- Nota
+    - Desactivar entorno virtual:
+        exit
+        deactivate
 ## Frontend
 - npx create-react-app frontend
 - npm i bootstrap axios
