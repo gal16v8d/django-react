@@ -6,4 +6,19 @@ function getCientificas() {
     .catch(error => console.log(error));
 };
 
-export {getCientificas}
+function addCientifica(cientifica) {
+    let formData = new FormData();
+    if (cientifica.foto) {
+        formData.append('foto', cientifica.foto, cientifica.foto.name);
+    }
+    formData.append('nombre', cientifica.nombre);
+    formData.append('fecha_nacimiento', cientifica.fecha_nacimiento);
+    formData.append('nacionalidad', cientifica.nacionalidad);
+    formData.append('descripcion', cientifica.descripcion);
+    return axios.post('http://localhost:8000/api/cientificasClass/listado/', formData, 
+    {headers: {'content-type': 'multipart/form-data'}})
+    .then(response => console.log(response))
+    .catch(error => console.log(error));
+}
+
+export {getCientificas, addCientifica}

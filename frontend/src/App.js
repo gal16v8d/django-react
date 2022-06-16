@@ -1,14 +1,23 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import { getCientificas } from './services/helper';
+import { addCientifica, getCientificas } from './services/helper';
 import Card from './components/Card';
+import Modal from './components/Modal';
 
 function App() {
   const [cientificas, setCientificas] = useState([]);
+  const [isAddModalOpen, setIsAddModalOpen] = useState(false);
 
   const getCientificasData = () => {
     getCientificas()
       .then(response => setCientificas(response));
+  };
+
+  const newCientifica = (cientifica) => {
+    addCientifica(cientifica).then(response => {
+      setIsAddModalOpen(false);
+      getCientificasData();
+    });
   };
 
   useEffect(() => {
@@ -27,7 +36,7 @@ function App() {
               demostrado ...
           </div>
           <div className='col-md-6 col-12'>
-              <button className='btn btn-success float-end mr-2'>Agregar</button>
+              <button className='btn btn-success float-end mr-2' onClick={() => setIsAddModalOpen(true)}>Agregar</button>
           </div>
         </div>
       </section>
@@ -41,6 +50,13 @@ function App() {
           }
         </div>
       </section>
+      {isAddModalOpen ? 
+        <Modal 
+          idModal={'agregarCientifica'} 
+          label={'Agregar Cientifica'} 
+          onCancel={() => setIsAddModalOpen(false)} 
+          onSave={newCientifica}
+        />: null}
     </div>
   );
 }
