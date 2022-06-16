@@ -33,13 +33,12 @@ function App() {
       </section>
       <section>
         <div className='row'>
-          {cientificas.map(cientifica => {
-            return (
+          {cientificas.map((cientifica) => 
               <div className='col-12 col-md-6 col-lg-4'>
                 <Card cientifica={cientifica} />
               </div>
-            );
-          })}
+            )
+          }
         </div>
       </section>
     </div>
