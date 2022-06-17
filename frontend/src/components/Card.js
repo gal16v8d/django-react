@@ -23,6 +23,12 @@ function Card({cientifica, editAction, deleteAction}) {
                 </p>
             </div>
             <div className="card-actions">
+                <button className="icon-button" onClick={() => editAction(cientifica)}>
+                    <i className="bi bi-pencil-square text-primary"></i>
+                </button>
+                <button className="icon-button" onClick={() => deleteAction(cientifica.id)}>
+                    <i className="bi bi-trash text-danger"></i>
+                </button>
             </div>
         </div>
     );

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import InputField from "./Input";
 
-function Modal({idModal, label, initialValue={}, onCancel, onSave}) {
+function Modal({idModal, label, initialValue={}, areas, onCancel, onSave}) {
     const objetoTemp = initialValue;
     const [cientificaObj, setCientificaObj] = useState(initialValue);
 
@@ -66,6 +66,9 @@ function Modal({idModal, label, initialValue={}, onCancel, onSave}) {
                                     label={'Descripcion'}
                                     parentAction={setValue}
                                 />
+                                <ol>
+                                    {areas.map(area => <li>{area.nombre}</li>)}
+                                </ol>
                             </form>
                             <div className="modal-footer">
                                 <button type="button" className="btn btn-secondary" onClick={() => onCancel()}>Cancelar</button>
