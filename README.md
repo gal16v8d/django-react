@@ -30,7 +30,7 @@ Repo workshop FullStack Women Developer
     [dev-packages]
 
     [requires]
-    python_version = "3.8"
+    python_version = "3.10"
     ```
 - Instalar las dependencias:
 pipenv install --skip-lock
