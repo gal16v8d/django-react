@@ -6,50 +6,50 @@ Repo workshop FullStack Women Developer
 
 ## Unix
 ## Backend
-- sudo apt install python3-venv
-- pip3 install pipenv
+- instalar pyenv
+- descargar la version de python requerida
 - mkdir django-react
 - dentro del folder django-react
+- mkdir backend
+- dentro del folder backend
 - mkdir .venv
-- crear archivo Pipfile con el siguiente contenido:
-    ```
-    [[source]]
-    url = "https://pypi.python.org/simple"
-    verify_ssl = true
-    name = "pypi"
-
-    [packages]
-    pylint = "*"
-    pep8 = "*"
-    autopep8 = "*"
-    django = "*"
-    Pillow = "*"
-    djangorestframework = "*"
-    django-cors-headers = "*"
-
-    [dev-packages]
-
-    [requires]
-    python_version = "3.10"
+- instalar poetry
+- correr el comando
+    ```bash
+    poetry env use <tu_ruta_a_python aca>
     ```
 - Instalar las dependencias:
-pipenv install --skip-lock
+    ```bash
+    poetry install
+    ```
 - Activar entorno virtual:
-pipenv shell
+    ```bash
+    source .venv/bin/activate
+    ```
 - Iniciar projecto backend:
-django-admin startproject backend
-- Navegar al directorio:
-cd backend
+    ```bash
+    django-admin startproject backend
+    ```
 - Correr el servidor django:
-python3 manage.py runserver
+    ```bash
+    python3 manage.py runserver
+    ```
 - Crear una nueva aplicacion:
-python3 manage.py startapp <nombre_app>
+    ```bash
+    python3 manage.py startapp <nombre_app>
+    ```
 - Crear archivo de migraciones (luego de definir el modelo):
-python3 manage.py makemigrations <nombre_modelo>
+    ```bash
+    python3 manage.py makemigrations <nombre_modelo>
+    ```
 - Aplicar los cambios en la bd:
-python3 manage.py migrate <nombre_modelo>
+    ```bash
+    python3 manage.py migrate <nombre_modelo>
+    ```
 - Crear el superusuario:
-python3 manage.py createsuperuser
+    ```bash
+    python3 manage.py createsuperuser
+    ```
 
 - Nota
     - Desactivar entorno virtual:
